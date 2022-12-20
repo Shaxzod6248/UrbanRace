@@ -9,13 +9,11 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 class ProductsViewSet(viewsets.ModelViewSet):
     queryset = Products.objects.all()
     serializer_class = Productserializer
-    authentication_classes = [JWTAuthentication]
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    authentication_classes = [JWTAuthentication]
 
 
 class OrderViewSet(viewsets.ModelViewSet):
